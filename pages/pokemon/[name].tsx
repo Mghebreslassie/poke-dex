@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PokeResults } from "..";
-import { Pokedex, Pokemon } from "../types";
+import { Pokedex, Pokemon } from "../../types";
 
 const PokePage: NextPage<{ data: Pokemon; desc: Pokedex }> = ({
   data,
