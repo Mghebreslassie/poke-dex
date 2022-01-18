@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
@@ -22,7 +21,7 @@ const Home: NextPage<{ results: PokeResults["PokeResults"] }> = ({
         {results?.map((p, i) => {
           return (
             <div key={p.name}>
-              <Link href={`/pokemon/${p.name}`}>
+              <Link href={`/pokemon/${p.name}`} passHref={true}>
                 <h4>{p.name}</h4>
               </Link>
             </div>

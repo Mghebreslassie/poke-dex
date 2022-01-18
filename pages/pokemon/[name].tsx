@@ -19,12 +19,13 @@ const PokePage: NextPage<{ data: Pokemon; desc: Pokedex }> = ({
         layout="fixed"
         width={230}
         height={190}
+        alt={data.name}
       />
       <h4>{data.types.map((p) => p.type.name).join(" ")}</h4>
       <h5>{`Height: ${data.height}`}</h5>
       <h5>{`Weight: ${data.weight}`}</h5>
       <p>{desc.flavor_text_entries[0].flavor_text}</p>
-      <Link href="/">
+      <Link href="/" passHref={true}>
         <h3>Go back</h3>
       </Link>
     </div>
